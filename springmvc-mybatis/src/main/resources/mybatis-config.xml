@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+<!--    <settings>-->
+<!--        &lt;!&ndash;开启懒加载&ndash;&gt;-->
+<!--        <setting name="lazyLoadingEnabled" value="true"/>-->
+<!--        &lt;!&ndash;关闭积极加载&ndash;&gt;-->
+<!--        <setting name="aggressiveLazyLoading" value="false"/>-->
+<!--        &lt;!&ndash;开启二级缓存&ndash;&gt;-->
+<!--        <setting name="cacheEnabled" value="true"/>-->
+<!--    </settings>-->
+
+    <!--开启后，使用简名替代全限定名-->
+    <typeAliases>
+        <package name="cn.itcast.ssm.po"/>
+    </typeAliases>
+
+
+    <!--加载映射文件, spring集成后可以删除-->
+<!--    <mappers>
+        <dao resource="mappers/ItemsMapper.xml"/>
+        <dao resource="mappers/UserMapper.xml"/>
+        <dao resource="mappers/OrderdetailMapper.xml"/>
+        <dao resource="mappers/OrdersMapper.xml"/>
+        <package name="cn.itcast.ssm.dao"/>
+    </mappers>-->
+
+
+</configuration>
