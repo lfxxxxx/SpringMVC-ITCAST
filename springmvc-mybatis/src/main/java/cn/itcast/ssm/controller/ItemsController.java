@@ -19,7 +19,7 @@ public class ItemsController {
 	public ItemsService itemsService;
 
 	@RequestMapping("/queryItems")
-	public ModelAndView findItemsList() throws Exception {
+	public ModelAndView findItemsList(){
 		List<ItemsCustom> itemsList = itemsService.findItemsList(null);
 
 		//返回ModelAndView
@@ -36,6 +36,12 @@ public class ItemsController {
 	}
 
 	//商品信息修改页面展示
+	public  ModelAndView editItems(){
+		ModelAndView modelAndView = new ModelAndView();
+
+		modelAndView.setViewName("items/editItems");
+		return modelAndView;
+	}
 }
 
 
