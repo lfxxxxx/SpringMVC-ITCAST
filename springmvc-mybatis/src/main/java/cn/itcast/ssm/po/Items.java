@@ -33,6 +33,7 @@ public class Items {
     /**
     * 商品图片
     */
+
     private String pic;
 
     /**

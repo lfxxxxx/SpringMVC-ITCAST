@@ -25,14 +25,25 @@
     <!--    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/>-->
 
     <!-- 使用 mvc:annotation-driven代替上边注解映射器和注解适配器配置-->
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven conversion-service="conversionService"/>
 
     <!--============================================================================================================ -->
     <!-- 视图解析器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <!-- 配置jsp路径的前缀 -->
         <property name="prefix" value="/WEB-INF/jsp/"/>
-        <!-- 配置jsp路径的后缀 -->
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <!--============================================================================================================ -->
+    <!--自定义参数绑定-->
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="converters">
+            <list>
+                <!--日期类型转换-->
+                <bean class="cn.itcast.ssm.controller.converter.CustomDateConverter"/>
+            </list>
+        </property>
+    </bean>
+
+
 </beans>
